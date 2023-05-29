@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F0DB8202A24D5210021DF5B /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0DB81F2A24D5210021DF5B /* APICaller.swift */; };
 		4F4088E42A1F9C0E003809E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4088E32A1F9C0E003809E1 /* AppDelegate.swift */; };
 		4F4088E62A1F9C0E003809E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4088E52A1F9C0E003809E1 /* SceneDelegate.swift */; };
 		4F4088EB2A1F9C0E003809E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F4088E92A1F9C0E003809E1 /* Main.storyboard */; };
@@ -19,9 +20,11 @@
 		4F4089022A1F9FB7003809E1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4089012A1F9FB7003809E1 /* SearchViewController.swift */; };
 		4F4089042A1FA030003809E1 /* DownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4089032A1FA030003809E1 /* DownloadViewController.swift */; };
 		4F40890B2A1FB90B003809E1 /* CollestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F40890A2A1FB90B003809E1 /* CollestionTableViewCell.swift */; };
+		4F4C6EBF2A20C16500CF3CA2 /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4C6EBE2A20C16500CF3CA2 /* HeroHeaderUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F0DB81F2A24D5210021DF5B /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		4F4088E02A1F9C0E003809E1 /* Netflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Netflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F4088E32A1F9C0E003809E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F4088E52A1F9C0E003809E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +39,7 @@
 		4F4089012A1F9FB7003809E1 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4F4089032A1FA030003809E1 /* DownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewController.swift; sourceTree = "<group>"; };
 		4F40890A2A1FB90B003809E1 /* CollestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollestionTableViewCell.swift; sourceTree = "<group>"; };
+		4F4C6EBE2A20C16500CF3CA2 /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				4F40890A2A1FB90B003809E1 /* CollestionTableViewCell.swift */,
+				4F4C6EBE2A20C16500CF3CA2 /* HeroHeaderUIView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 		4F4089092A1FB8CB003809E1 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				4F0DB81F2A24D5210021DF5B /* APICaller.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -205,12 +211,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F4089002A1F9F44003809E1 /* UpcomingViewController.swift in Sources */,
+				4F4C6EBF2A20C16500CF3CA2 /* HeroHeaderUIView.swift in Sources */,
 				4F4089022A1F9FB7003809E1 /* SearchViewController.swift in Sources */,
 				4F40890B2A1FB90B003809E1 /* CollestionTableViewCell.swift in Sources */,
 				4F4088FE2A1F9EDE003809E1 /* HomeViewController.swift in Sources */,
 				4F4088E42A1F9C0E003809E1 /* AppDelegate.swift in Sources */,
 				4F4088FB2A1F9D2B003809E1 /* MainTabBarViewController.swift in Sources */,
 				4F4088EE2A1F9C0E003809E1 /* Netflix.xcdatamodeld in Sources */,
+				4F0DB8202A24D5210021DF5B /* APICaller.swift in Sources */,
 				4F4089042A1FA030003809E1 /* DownloadViewController.swift in Sources */,
 				4F4088E62A1F9C0E003809E1 /* SceneDelegate.swift in Sources */,
 			);
