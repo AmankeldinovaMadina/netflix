@@ -7,9 +7,14 @@
 
 import UIKit
 
-class CollestionTableViewCell: UITableViewCell {
+
+
+
+class CollectionTableViewCell: UITableViewCell {
 
   static let identifier = "CollestionTableViewCell"
+    
+    private var titles: [Title] = [Title]()
     
     
     private let collectionView: UICollectionView = {
@@ -18,7 +23,7 @@ class CollestionTableViewCell: UITableViewCell {
         layout.itemSize = CGSize(width: 140, height: 200)
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.register(TitleCollectionViewCell.self, forCellWithReuseIdentifier: TitleCollectionViewCell.identifier)
         return collectionView
     }()
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -38,17 +43,33 @@ class CollestionTableViewCell: UITableViewCell {
         super.layoutSubviews()
         collectionView.frame = contentView.bounds
     }
+    
+    
+    
+    public func configure(with titles: [Title]){
+        self.titles = titles
+        DispatchQueue.main.async {[weak self] in
+            self?.collectionView.reloadData()
+        }
+        
+    }
 }
 
-extension CollestionTableViewCell:UICollectionViewDelegate, UICollectionViewDataSource {
+extension CollectionTableViewCell:UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView( _ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        cell.backgroundColor = .green
+        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TitleCollectionViewCell.identifier, for: indexPath) as? TitleCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        
+        guard let model = titles[indexPath.row].poster_path else {
+            return UICollectionViewCell()
+        }
+        cell.configure(with: model)
         return cell
     }
     
     func collectionView( _ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
-    }
+        return titles.count    }
 }
